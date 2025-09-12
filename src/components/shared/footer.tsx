@@ -71,7 +71,7 @@ export const Footer = () => {
 
           <div className="mt-12 pt-8 border-t border-[var(--gris-oscuro)] text-center">
             <p className="text-[var(--gris)] text-sm">
-              ©2025 HANNAH PRODUCE S.A.S. TODOS LOS DERECHOS RESERVADOS.
+              ©2025 HANNAH PRODUCE S.A.C. TODOS LOS DERECHOS RESERVADOS.
             </p>
           </div>
         </div>
