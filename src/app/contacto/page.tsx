@@ -1,6 +1,12 @@
+import { Metadata } from "next";
 import { FormularioContacto } from "@/components/contact-form";
 import { Section } from "@/components/section";
 import { AnimatedTitle } from "@/components/animations";
+
+export const metadata: Metadata = {
+  title: "Contacto",
+  description: "Ponte en contacto con Hannah Lab. Hablemos de tu proyecto y empecemos algo especial juntos. Servicios de automatización, desarrollo y audiovisual.",
+};
 
 export default function ContactPage() {
   return (

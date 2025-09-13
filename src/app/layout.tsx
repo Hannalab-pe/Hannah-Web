@@ -16,9 +16,58 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hannah Produce - Productos Agrícolas Premium",
+  title: {
+    template: "%s | Hannah Lab",
+    default: "Hannah Lab - Automatización e Innovación Tecnológica",
+  },
   description:
-    "Hannah Produce ofrece productos agrícolas de la más alta calidad, conectando productores locales con mercados globales.",
+    "Hannah Lab: Automatización inteligente, desarrollo de software y producción audiovisual. Creamos soluciones tecnológicas que transforman tu negocio.",
+  keywords: [
+    "automatización",
+    "desarrollo de software",
+    "producción audiovisual",
+    "consultoría técnica",
+    "innovación tecnológica",
+    "Hannah Lab",
+    "soluciones digitales"
+  ],
+  authors: [{ name: "Hannah Lab" }],
+  creator: "Hannah Lab",
+  publisher: "Hannah Lab",
+  metadataBase: new URL("https://hannalab.pe"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_PE",
+    url: "https://hannalab.pe",
+    siteName: "Hannah Lab",
+    title: "Hannah Lab - Automatización e Innovación Tecnológica",
+    description: "Automatización inteligente, desarrollo de software y producción audiovisual. Transformamos tu negocio con tecnología.",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hannah Lab - Automatización e Innovación",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hannah Lab - Automatización e Innovación Tecnológica",
+    description: "Automatización inteligente, desarrollo de software y producción audiovisual.",
+    images: ["/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function RootLayout({
