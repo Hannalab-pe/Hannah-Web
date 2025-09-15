@@ -1,13 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useRouter, usePathname } from "next/navigation";
 
 export const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
-  const router = useRouter();
-  const pathname = usePathname();
 
   // Función para determinar si un link está activo
   const [activeSection, setActiveSection] = useState("inicio");

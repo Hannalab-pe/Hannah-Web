@@ -22,6 +22,11 @@ export const metadata: Metadata = {
   },
   description:
     "Hannah Lab: Automatización inteligente, desarrollo de software y producción audiovisual. Creamos soluciones tecnológicas que transforman tu negocio.",
+  icons: {
+    icon: "/images/logos/hannah.png",
+    shortcut: "/images/logos/hannah.png",
+    apple: "/images/logos/hannah.png",
+  },
   keywords: [
     "automatización",
     "desarrollo de software",

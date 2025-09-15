@@ -10,14 +10,14 @@ export interface ContactFormData {
 interface ContactFormResponse {
   success: boolean;
   message: string;
-  data?: any;
+  data?: unknown;
 }
 
 export const sendForm = async (
   data: ContactFormData
 ): Promise<ContactFormResponse> => {
   try {
-    const response = await fetch("/api/contact", {
+    const response = await fetch("/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
