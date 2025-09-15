@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
 
 export const NavBar = () => {
@@ -11,8 +10,18 @@ export const NavBar = () => {
   const pathname = usePathname();
 
   // Función para determinar si un link está activo
-  const isActiveLink = (href: string) => {
-    return pathname === href;
+  const [activeSection, setActiveSection] = useState("inicio");
+
+  // Función para scroll suave a secciones
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+      setActiveSection(sectionId);
+    }
   };
 
   // Handle scroll effect for navbar
@@ -72,68 +81,51 @@ export const NavBar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <Link
-            href="/inicio"
+          <button
+            onClick={() => scrollToSection("inicio")}
             className={`transition-colors duration-300 relative group ${
-              isActiveLink("/inicio")
+              activeSection === "inicio"
                 ? "text-[var(--verde-limon)]"
                 : "text-[var(--blanco)] hover:text-[var(--verde-limon)]"
             }`}
           >
             Inicio
             <span className={`absolute -bottom-1 left-0 h-0.5 bg-[var(--verde-limon)] transition-all duration-300 ${
-              isActiveLink("/inicio") ? "w-full" : "w-0 group-hover:w-full"
+              activeSection === "inicio" ? "w-full" : "w-0 group-hover:w-full"
             }`}></span>
-          </Link>
-          <Link
-            href="/servicios"
+          </button>
+          <button
+            onClick={() => scrollToSection("nosotros")}
             className={`transition-colors duration-300 relative group ${
-              isActiveLink("/servicios")
-                ? "text-[var(--verde-limon)]"
-                : "text-[var(--blanco)] hover:text-[var(--verde-limon)]"
-            }`}
-          >
-            Servicios
-            <span className={`absolute -bottom-1 left-0 h-0.5 bg-[var(--verde-limon)] transition-all duration-300 ${
-              isActiveLink("/servicios") ? "w-full" : "w-0 group-hover:w-full"
-            }`}></span>
-          </Link>
-          <Link
-            href="/nosotros"
-            className={`transition-colors duration-300 relative group ${
-              isActiveLink("/nosotros")
+              activeSection === "nosotros"
                 ? "text-[var(--verde-limon)]"
                 : "text-[var(--blanco)] hover:text-[var(--verde-limon)]"
             }`}
           >
             Nosotros
             <span className={`absolute -bottom-1 left-0 h-0.5 bg-[var(--verde-limon)] transition-all duration-300 ${
-              isActiveLink("/nosotros") ? "w-full" : "w-0 group-hover:w-full"
+              activeSection === "nosotros" ? "w-full" : "w-0 group-hover:w-full"
             }`}></span>
-          </Link>
-          <Link
-            href="/contacto"
+          </button>
+          <button
+            onClick={() => scrollToSection("contacto")}
             className={`transition-colors duration-300 relative group ${
-              isActiveLink("/contacto")
+              activeSection === "contacto"
                 ? "text-[var(--verde-limon)]"
                 : "text-[var(--blanco)] hover:text-[var(--verde-limon)]"
             }`}
           >
             Contacto
             <span className={`absolute -bottom-1 left-0 h-0.5 bg-[var(--verde-limon)] transition-all duration-300 ${
-              isActiveLink("/contacto") ? "w-full" : "w-0 group-hover:w-full"
+              activeSection === "contacto" ? "w-full" : "w-0 group-hover:w-full"
             }`}></span>
-          </Link>
-          <button
-            className={`px-4 py-2 rounded transition-all duration-300 ${
-              isActiveLink("/portafolio")
-                ? "bg-[var(--verde-limon)] text-[var(--negro)]"
-                : "bg-[var(--verde)] text-[var(--negro)] hover:bg-[var(--verde-limon)]"
-            }`}
+          </button>
+          {/* <button
+            className="px-4 py-2 rounded transition-all duration-300 bg-[var(--verde)] text-[var(--negro)] hover:bg-[var(--verde-limon)]"
             onClick={() => router.push("/portafolio")}
           >
             Portafolio
-          </button>
+          </button> */}
         </div>
 
         {/* Mobile Menu Button */}
@@ -211,74 +203,63 @@ export const NavBar = () => {
 
             {/* Navigation Links con animación escalonada */}
             <div className="flex flex-col p-6 space-y-6">
-              <Link
-                href="/inicio"
-                className={`border-b border-gray-200 text-xl font-medium relative group transition-colors duration-300 py-2 ${
-                  isActiveLink("/inicio") 
+              <button
+                onClick={() => {
+                  scrollToSection("inicio");
+                  closeMobileMenu();
+                }}
+                className={`border-b border-gray-200 text-xl font-medium relative group transition-colors duration-300 py-2 text-left ${
+                  activeSection === "inicio" 
                     ? "text-[var(--verde)]" 
                     : "text-gray-800"
                 } ${
                   isClosing ? "animate-fade-out-down" : "animate-fade-in-up"
                 }`}
                 style={{ animationDelay: isClosing ? "0s" : "0.1s" }}
-                onClick={closeMobileMenu}
               >
                 Inicio
                 <span className={`absolute -bottom-1 left-0 h-0.5 bg-[var(--verde)] transition-all duration-300 ${
-                  isActiveLink("/inicio") ? "w-full" : "w-0 group-hover:w-full"
+                  activeSection === "inicio" ? "w-full" : "w-0 group-hover:w-full"
                 }`}></span>
-              </Link>
-              <Link
-                href="/servicios"
-                className={`border-b border-gray-200 text-xl font-medium relative group transition-colors duration-300 py-2 ${
-                  isActiveLink("/servicios") 
-                    ? "text-[var(--verde)]" 
-                    : "text-gray-800"
-                } ${
-                  isClosing ? "animate-fade-out-down" : "animate-fade-in-up"
-                }`}
-                style={{ animationDelay: isClosing ? "0.05s" : "0.2s" }}
-                onClick={closeMobileMenu}
-              >
-                Servicios
-                <span className={`absolute -bottom-1 left-0 h-0.5 bg-[var(--verde)] transition-all duration-300 ${
-                  isActiveLink("/servicios") ? "w-full" : "w-0 group-hover:w-full"
-                }`}></span>
-              </Link>
-              <Link
-                href="/nosotros"
-                className={`border-b border-gray-200 text-xl font-medium relative group transition-colors duration-300 py-2 ${
-                  isActiveLink("/nosotros") 
+              </button>
+              <button
+                onClick={() => {
+                  scrollToSection("nosotros");
+                  closeMobileMenu();
+                }}
+                className={`border-b border-gray-200 text-xl font-medium relative group transition-colors duration-300 py-2 text-left ${
+                  activeSection === "nosotros" 
                     ? "text-[var(--verde)]" 
                     : "text-gray-800"
                 } ${
                   isClosing ? "animate-fade-out-down" : "animate-fade-in-up"
                 }`}
                 style={{ animationDelay: isClosing ? "0.1s" : "0.3s" }}
-                onClick={closeMobileMenu}
               >
                 Nosotros
                 <span className={`absolute -bottom-1 left-0 h-0.5 bg-[var(--verde)] transition-all duration-300 ${
-                  isActiveLink("/nosotros") ? "w-full" : "w-0 group-hover:w-full"
+                  activeSection === "nosotros" ? "w-full" : "w-0 group-hover:w-full"
                 }`}></span>
-              </Link>
-              <Link
-                href="/contacto"
-                className={`text-xl font-medium relative group transition-colors duration-300 py-2 ${
-                  isActiveLink("/contacto") 
+              </button>
+              <button
+                onClick={() => {
+                  scrollToSection("contacto");
+                  closeMobileMenu();
+                }}
+                className={`text-xl font-medium relative group transition-colors duration-300 py-2 text-left ${
+                  activeSection === "contacto" 
                     ? "text-[var(--verde)]" 
                     : "text-gray-800"
                 } ${
                   isClosing ? "animate-fade-out-down" : "animate-fade-in-up"
                 }`}
                 style={{ animationDelay: isClosing ? "0.15s" : "0.4s" }}
-                onClick={closeMobileMenu}
               >
                 Contacto
                 <span className={`absolute -bottom-1 left-0 h-0.5 bg-[var(--verde)] transition-all duration-300 ${
-                  isActiveLink("/contacto") ? "w-full" : "w-0 group-hover:w-full"
+                  activeSection === "contacto" ? "w-full" : "w-0 group-hover:w-full"
                 }`}></span>
-              </Link>
+              </button>
 
               {/* Action Buttons con animación */}
               <div
@@ -287,23 +268,19 @@ export const NavBar = () => {
                 }`}
                 style={{ animationDelay: isClosing ? "0.2s" : "0.5s" }}
               >
-                <button
-                  className={`w-full px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                    isActiveLink("/portafolio")
-                      ? "bg-[var(--verde-limon)] text-white"
-                      : "bg-[var(--verde)] text-white hover:bg-[var(--verde-limon)]"
-                  }`}
+                {/* <button
+                  className="w-full px-6 py-3 rounded-lg font-medium transition-all duration-300 bg-[var(--verde)] text-white hover:bg-[var(--verde-limon)]"
                   onClick={() => {
                     router.push("/portafolio");
                     closeMobileMenu();
                   }}
                 >
                   Ver Portafolio
-                </button>
+                </button> */}
                 <button
                   className="w-full px-6 py-3 border-2 border-gray-300 text-gray-700 rounded-lg font-medium hover:border-[var(--verde)] hover:text-[var(--verde)] transition-all duration-300"
                   onClick={() => {
-                    router.push("/contacto");
+                    scrollToSection("contacto");
                     closeMobileMenu();
                   }}
                 >

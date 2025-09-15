@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import { FormularioContacto } from "@/components/contact-form";
 import { Section } from "@/components/section";
-import { AnimatedTitle } from "@/components/animations";
 
 export const metadata: Metadata = {
   title: "Contacto",
@@ -17,7 +16,7 @@ export default function ContactPage() {
           {/* Título principal */}
           <div className="mb-12">
             <h1 className="text-6xl lg:text-7xl font-[var(--font-righteous)] leading-tight mb-6">
-              Let's get
+              Let&apos;s get
               <br />
               <span className="text-[var(--verde)]">in touch</span>
             </h1>
@@ -49,7 +48,7 @@ export default function ContactPage() {
               {/* Teléfono */}
               <div>
                 <p className="text-sm font-medium text-[var(--gris)] mb-1">Teléfono</p>
-                <p className="text-lg font-medium text-[var(--negro)]">+(51) 987-654-321</p>
+                <p className="text-lg font-medium text-[var(--negro)]">+(51) 984 323 201</p>
               </div>
 
               {/* Email */}

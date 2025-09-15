@@ -4,7 +4,7 @@ import { Section } from "@/components/section";
 
 export const Herramientas = () => {
   return (
-    <Section>
+    <Section videoSrc="/videos/fondo-2.mp4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="flex justify-center md:justify-start">
           <AnimatedTitle
@@ -19,9 +19,7 @@ export const Herramientas = () => {
         </div>
         <FadeUpCard className="text-center md:text-left" delay={0.4}>
           <p className="text-xl md:text-2xl text-[var(--blanco)] font-[var(--font-now)] leading-relaxed italic">
-            "Creamos automatizaciones inteligentes que ahorran tiempo, reducen
-            errores y aumentan la eficiencia, sin necesidad de cambiar tu
-            ecosistema actual."
+            {'"Creamos automatizaciones inteligentes que ahorran tiempo, reducen errores y aumentan la eficiencia, sin necesidad de cambiar tu ecosistema actual."'}
           </p>
         </FadeUpCard>
       </div>

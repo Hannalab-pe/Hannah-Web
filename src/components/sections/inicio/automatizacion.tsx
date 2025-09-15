@@ -3,7 +3,7 @@ import { AnimatedTitle, FadeUpCard } from "@/components/animations";
 
 export const Automatizacion = () => {
   return (
-    <Section>
+    <Section videoSrc="/videos/fondo-3.mp4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="flex justify-center md:justify-start">
           <AnimatedTitle
@@ -17,7 +17,7 @@ export const Automatizacion = () => {
         </div>
         <FadeUpCard className="text-center md:text-left" delay={0.4}>
           <p className="text-xl md:text-2xl text-[var(--blanco)] font-[var(--font-now)] leading-relaxed italic">
-            "Python, Langchain, para crear automatizaciones en base a scripts y procesos de IA."
+            {'"Python, Langchain, para crear automatizaciones en base a scripts y procesos de IA."'}
           </p>
         </FadeUpCard>
       </div>

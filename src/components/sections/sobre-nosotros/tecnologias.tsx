@@ -1,5 +1,6 @@
-import { AnimatedTitle, StaggeredList, FadeUpCard } from "@/components/animations";
+import { AnimatedTitle, FadeUpCard } from "@/components/animations";
 import { technologies } from "@/libs/tenologias";
+import Image from "next/image";
 
 export const Tecnologias = () => {
 
@@ -29,7 +30,9 @@ export const Tecnologias = () => {
                   className="flex-shrink-0"
                 >
                   <div className="w-20 h-20 md:w-24 md:h-24 bg-[var(--gris-oscuro)] rounded-xl border border-[var(--gris)] hover:border-[var(--verde)] transition-all duration-300 flex items-center justify-center group hover:scale-110 hover:bg-[var(--verde)] hover:bg-opacity-10">
-                    <img 
+                    <Image 
+                      width={100}
+                      height={100}
                       src={tech.logo} 
                       alt={tech.name}
                       className="w-10 h-10 md:w-12 md:h-12 object-contain filter brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-300"
@@ -39,25 +42,6 @@ export const Tecnologias = () => {
                 </FadeUpCard>
               ))}
             </div>
-            
-            {/* Duplicate set for seamless loop */}
-            {/* <div className="flex gap-6 min-w-max ml-6">
-              {technologies.map((tech, index) => (
-                <div 
-                  key={`second-${tech.name}`}
-                  className="flex-shrink-0"
-                >
-                  <div className="w-20 h-20 md:w-24 md:h-24 bg-[var(--gris-oscuro)] rounded-xl border border-[var(--gris)] hover:border-[var(--verde)] transition-all duration-300 flex items-center justify-center group hover:scale-110 hover:bg-[var(--verde)] hover:bg-opacity-10">
-                    <img 
-                      src={tech.logo} 
-                      alt={tech.name}
-                      className="w-10 h-10 md:w-12 md:h-12 object-contain filter brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-300"
-                      title={tech.name}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div> */}
           </div>
 
           {/* Gradient overlays for smooth edges */}

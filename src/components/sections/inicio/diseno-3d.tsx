@@ -17,8 +17,7 @@ export const Diseno3D = () => {
         </div>
         <FadeUpCard className="text-center md:text-left" delay={0.4}>
           <p className="text-xl md:text-2xl text-[var(--blanco)] font-[var(--font-now)] leading-relaxed italic">
-            "Blender, Cinema 4D, Maya y otras herramientas de modelado y
-            animación 3D para crear visualizaciones impactantes."
+            {'"Blender, Cinema 4D, Maya y otras herramientas de modelado y animación 3D para crear visualizaciones impactantes."'}
           </p>
         </FadeUpCard>
       </div>

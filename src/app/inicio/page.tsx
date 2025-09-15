@@ -3,12 +3,11 @@ import { HeroInicio } from "@/components/sections/inicio/hero";
 import { Herramientas } from "@/components/sections/inicio/herramientas";
 import { Dominamos } from "@/components/sections/inicio/dominamos";
 import { Automatizacion } from "@/components/sections/inicio/automatizacion";
-import { Audiovisual } from "@/components/sections/inicio/audiovisual";
 import { DesarrolloWeb } from "@/components/sections/inicio/desarrollo-web";
-import { Diseno3D } from "@/components/sections/inicio/diseno-3d";
 import { Hannah } from "@/components/sections/sobre-nosotros/hannah";
 import { Tecnologias } from "@/components/sections/sobre-nosotros/tecnologias";
 import { Partners } from "@/components/sections/sobre-nosotros/partners";
+import Contacto from "@/components/sections/contacto/contacto";
 
 export const metadata: Metadata = {
   title: "Inicio",
@@ -30,8 +29,10 @@ export default function HomePage() {
       {/* Sección de Hannah - Sobre Nosotros - El equipo*/}
       <Hannah />
       <Tecnologias />
-      {/* Sección de Partners */}
       <Partners />
+
+      {/* Sección de Contacto */}
+      <Contacto />
     </>
   );
 }

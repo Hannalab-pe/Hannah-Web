@@ -6,7 +6,7 @@ interface Props {
 export const WhatsAppButton = ({
   phoneNumber = "5212345678",
   message = "Hola, me interesa conocer más sobre Hannah Produce",
-}) => {
+}: Props) => {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message
   )}`;

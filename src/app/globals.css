@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+/* Import Righteous font */
+@font-face {
+  font-family: "Righteous";
+  src: url("/fonts/primary/Righteous-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Color Palette */
   --verde: #93ca07;
@@ -27,6 +36,11 @@ body {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Apply Righteous font to all heading elements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-righteous);
 }
 
 /* Animaciones para el menú móvil */

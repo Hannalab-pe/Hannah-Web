@@ -3,7 +3,7 @@ import { Section } from "@/components/section";
 
 export const Dominamos = () => {
   return (
-    <Section>
+    <Section videoSrc="/videos/fondo-4.mp4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         <div className="flex justify-center md:justify-start">
           <AnimatedTitle
@@ -18,10 +18,7 @@ export const Dominamos = () => {
         </div>
         <FadeUpCard className="text-center md:text-left" delay={0.4}>
           <p className="text-xl md:text-2xl text-[var(--blanco)] font-[var(--font-now)] leading-relaxed italic">
-            "Nuestro equipo se actualiza constantemente con las últimas
-            tecnologías y tendencias. Así ofrecemos soluciones innovadoras y
-            vanguardistas, creando soluciones robustas y escalables para
-            cualquier necesidad."
+            {'"Nuestro equipo se actualiza constantemente con las últimas tecnologías y tendencias. Así ofrecemos soluciones innovadoras y vanguardistas, creando soluciones robustas y escalables para cualquier necesidad."'}
           </p>
         </FadeUpCard>
       </div>

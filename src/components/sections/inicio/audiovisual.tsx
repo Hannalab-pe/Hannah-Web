@@ -18,9 +18,7 @@ export const Audiovisual = () => {
         </div>
         <FadeUpCard className="text-center md:text-left" delay={0.4}>
           <p className="text-xl md:text-2xl text-[var(--blanco)] font-[var(--font-now)] leading-relaxed italic">
-            "Adobe Premiere, After Effects, DaVinci Resolve, Final Cut Pro y
-            otras herramientas profesionales para crear contenido audiovisual de
-            alta calidad."
+            {'"Adobe Premiere, After Effects, DaVinci Resolve, Final Cut Pro y otras herramientas profesionales para crear contenido audiovisual de alta calidad."'}
           </p>
         </FadeUpCard>
       </div>
