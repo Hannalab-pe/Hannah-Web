@@ -6,6 +6,9 @@ import { Automatizacion } from "@/components/sections/inicio/automatizacion";
 import { Audiovisual } from "@/components/sections/inicio/audiovisual";
 import { DesarrolloWeb } from "@/components/sections/inicio/desarrollo-web";
 import { Diseno3D } from "@/components/sections/inicio/diseno-3d";
+import { Hannah } from "@/components/sections/sobre-nosotros/hannah";
+import { Tecnologias } from "@/components/sections/sobre-nosotros/tecnologias";
+import { Partners } from "@/components/sections/sobre-nosotros/partners";
 
 export const metadata: Metadata = {
   title: "Inicio",
@@ -17,17 +20,18 @@ export default function HomePage() {
     <>
       {/* Sección Hero con Video de Fondo */}
       <HeroInicio />
-
       {/* Sección de Herramientas que usan Herramientas */}
       <Herramientas />
-
-      {/* Otras secciones pueden ir aquí */}
       <Dominamos />
       <Automatizacion />
-      <Audiovisual />
+      {/* <Audiovisual /> */}
       <DesarrolloWeb />
-      <Diseno3D />
-
+      {/* <Diseno3D /> */}
+      {/* Sección de Hannah - Sobre Nosotros - El equipo*/}
+      <Hannah />
+      <Tecnologias />
+      {/* Sección de Partners */}
+      <Partners />
     </>
   );
 }

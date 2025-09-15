@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 interface SectionProps {
   children: ReactNode;
   videoSrc?: string;
+  imageSrc?: string;
   className?: string;
   overlay?: boolean;
   overlayOpacity?: number;
@@ -11,6 +12,7 @@ interface SectionProps {
 export const Section = ({
   children,
   videoSrc,
+  imageSrc,
   className = "",
   overlay = false,
   overlayOpacity = 0.5,
@@ -31,6 +33,14 @@ export const Section = ({
           <source src={videoSrc} type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
+      )}
+
+      {/* Imagen de fondo opcional */}
+      {imageSrc && !videoSrc && (
+        <div
+          className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat z-0"
+          style={{ backgroundImage: `url(${imageSrc})` }}
+        />
       )}
 
       {/* Overlay opcional */}
