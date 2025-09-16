@@ -39,14 +39,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Hannah Lab" }],
   creator: "Hannah Lab",
   publisher: "Hannah Lab",
-  metadataBase: new URL("https://hannalab.pe"),
+  metadataBase: new URL("https://hannahlab.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "es_PE",
-    url: "https://hannalab.pe",
+    url: "https://hannahlab.com",
     siteName: "Hannah Lab",
     title: "Hannah Lab - Automatización e Innovación Tecnológica",
     description: "Automatización inteligente, desarrollo de software y producción audiovisual. Transformamos tu negocio con tecnología.",
