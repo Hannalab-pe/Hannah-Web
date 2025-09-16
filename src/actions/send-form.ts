@@ -1,3 +1,5 @@
+import { toast } from "sonner";
+
 export interface ContactFormData {
   nombre: string;
   email: string;
@@ -16,8 +18,11 @@ interface ContactFormResponse {
 export const sendForm = async (
   data: ContactFormData
 ): Promise<ContactFormResponse> => {
+
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
   try {
-    const response = await fetch("/contact", {
+    const response = await fetch(`${API_URL}/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -30,7 +35,7 @@ export const sendForm = async (
     }
 
     const result = await response.json();
-    console.log("Mensaje enviado con éxito");
+    toast.success("Mensaje enviado correctamente");
 
     return {
       success: true,
@@ -38,7 +43,7 @@ export const sendForm = async (
       data: result,
     };
   } catch (error) {
-    console.error("Error al enviar mensaje:", error);
+    toast.error("Error al enviar el mensaje");
 
     return {
       success: false,
