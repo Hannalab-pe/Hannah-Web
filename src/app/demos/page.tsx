@@ -41,7 +41,7 @@ export default function DemosPage() {
     }, 300);
   };
 
-  const handleEmailSubmit = (e) => {
+  const handleEmailSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (email.trim()) {
       // Aquí puedes agregar lógica para guardar el email si es necesario
