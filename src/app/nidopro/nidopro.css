@@ -1,0 +1,63 @@
+/* Fuentes personalizadas para NidoPro */
+.nidopro-container * {
+  font-family: 'Figtree', 'Outfit', sans-serif;
+}
+
+.nidopro-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+}
+
+.nidopro-text {
+  font-family: 'Figtree', sans-serif;
+}
+
+/* Animaciones personalizadas */
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-20px); 
+  }
+}
+
+@keyframes floatIntense {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  25% { 
+    transform: translateY(-15px) rotate(5deg); 
+  }
+  50% { 
+    transform: translateY(-30px) rotate(0deg); 
+  }
+  75% { 
+    transform: translateY(-15px) rotate(-5deg); 
+  }
+}
+
+@keyframes floatMega {
+  0%, 100% { 
+    transform: translateY(0px) scale(1); 
+  }
+  33% { 
+    transform: translateY(-25px) scale(1.1); 
+  }
+  66% { 
+    transform: translateY(-10px) scale(0.95); 
+  }
+}
+
+/* Clases de animación */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-floatIntense {
+  animation: floatIntense 8s ease-in-out infinite;
+}
+
+.animate-floatMega {
+  animation: floatMega 10s ease-in-out infinite;
+}
