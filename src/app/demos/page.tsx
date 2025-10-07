@@ -49,7 +49,7 @@ export default function DemosPage() {
       closeEmailModal();
       // Redirigir después de cerrar el modal
       setTimeout(() => {
-        window.open('https://eda-peru.vercel.app/login', '_blank');
+        window.open('https://eda-demo.vercel.app/login', '_blank');
       }, 400);
     }
   };
