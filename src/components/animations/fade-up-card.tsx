@@ -8,7 +8,6 @@ interface FadeUpCardProps {
   className?: string;
   delay?: number;
   duration?: number;
-  shadowIntensity?: "light" | "medium" | "heavy";
 }
 
 export const FadeUpCard = ({
@@ -16,21 +15,7 @@ export const FadeUpCard = ({
   className = "",
   delay = 0,
   duration = 0.7,
-  shadowIntensity = "medium",
 }: FadeUpCardProps) => {
-  const getShadowClass = () => {
-    switch (shadowIntensity) {
-      case "light":
-        return "shadow-lg";
-      case "medium":
-        return "shadow-xl";
-      case "heavy":
-        return "shadow-2xl";
-      default:
-        return "shadow-xl";
-    }
-  };
-
   return (
     <motion.div
       initial={{
@@ -52,10 +37,9 @@ export const FadeUpCard = ({
       whileHover={{
         y: -5,
         scale: 1.02,
-        boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
         transition: { duration: 0.3 },
       }}
-      className={`${getShadowClass()} hover:shadow-2xl transition-shadow duration-300 ${className}`}
+      className={`transition-shadow duration-300 ${className}`}
     >
       <motion.div
         initial={{ opacity: 0 }}

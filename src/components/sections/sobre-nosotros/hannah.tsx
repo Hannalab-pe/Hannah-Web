@@ -40,16 +40,16 @@ export const Hannah = () => {
           {/* Right Column - Key Stats */}
           <StaggeredList className="grid grid-cols-2 gap-6" staggerDelay={0.1}>
             <div className="bg-[var(--gris-oscuro)] p-6 rounded-lg border border-[var(--verde)] hover:border-[var(--verde-limon)] transition-colors">
-              <div className="text-3xl font-[var(--font-righteous)] text-[var(--verde)] mb-2">100+</div>
-              <div className="text-sm font-[var(--font-now)] text-[var(--gris-claro)]">Proyectos Completados</div>
+              <div className="text-3xl font-[var(--font-righteous)] text-[var(--verde)] mb-2">+AI</div>
+              <div className="text-sm font-[var(--font-now)] text-[var(--gris-claro)]">Soluciones inteligentes</div>
             </div>
             <div className="bg-[var(--gris-oscuro)] p-6 rounded-lg border border-[var(--verde)] hover:border-[var(--verde-limon)] transition-colors">
               <div className="text-3xl font-[var(--font-righteous)] text-[var(--verde)] mb-2">24/7</div>
               <div className="text-sm font-[var(--font-now)] text-[var(--gris-claro)]">Soporte Técnico</div>
             </div>
             <div className="bg-[var(--gris-oscuro)] p-6 rounded-lg border border-[var(--verde)] hover:border-[var(--verde-limon)] transition-colors">
-              <div className="text-3xl font-[var(--font-righteous)] text-[var(--verde)] mb-2">5+</div>
-              <div className="text-sm font-[var(--font-now)] text-[var(--gris-claro)]">Años de Experiencia</div>
+              <div className="text-3xl font-[var(--font-righteous)] text-[var(--verde)] mb-2">↑</div>
+              <div className="text-sm font-[var(--font-now)] text-[var(--gris-claro)]">Innovación que impulsa negocios</div>
             </div>
             <div className="bg-[var(--gris-oscuro)] p-6 rounded-lg border border-[var(--verde)] hover:border-[var(--verde-limon)] transition-colors">
               <div className="text-3xl font-[var(--font-righteous)] text-[var(--verde)] mb-2">∞</div>

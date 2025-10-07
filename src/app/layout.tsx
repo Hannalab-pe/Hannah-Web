@@ -95,7 +95,7 @@ export default function RootLayout({
 
           {/* Footer */}
           <Footer />
-          <WhatsAppButton phoneNumber="925757151"/>
+          <WhatsAppButton phoneNumber="984323201"/>
           <Toaster 
             position="top-right"
             duration={5000}
