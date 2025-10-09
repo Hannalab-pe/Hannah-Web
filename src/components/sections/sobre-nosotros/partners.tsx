@@ -32,7 +32,7 @@ export const Partners = () => {
               <FadeUpCard delay={0.8} className="text-lg font-[var(--font-now)] text-[var(--gris-claro)] leading-relaxed">
                 Combinamos nuestra experiencia en desarrollo de software con la potencia
                 de Odoo para crear sistemas integrados que optimizan procesos, mejoran
-                la productividad y impulsan el crecimiento empresarial.
+                la productividad e impulsan el crecimiento empresarial.
               </FadeUpCard>
             </div>
           </FadeUpCard>
@@ -70,34 +70,6 @@ export const Partners = () => {
               </FadeUpCard>
             </div>
           </FadeUpCard>
-        </div>
-
-        {/* Additional Partners Section */}
-        <div className="mt-16">
-          <AnimatedTitle delay={3.0} className="text-2xl font-bold text-[var(--verde-limon)] text-center mb-8">
-            Otros Partners Estratégicos
-          </AnimatedTitle>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 opacity-60">
-            {[
-              { name: "Bosch", logo: "/images/logos/bosch.webp" },
-              { name: "Entel", logo: "/images/logos/entel.webp" },
-              { name: "Natura", logo: "/images/logos/natura.webp" },
-              { name: "Volcán", logo: "/images/logos/volcan.webp" },
-              { name: "Weber", logo: "/images/logos/weber.webp" },
-              { name: "Betondecken", logo: "/images/logos/betondecken.webp" }
-            ].map((partner, index) => (
-              <FadeUpCard key={partner.name} delay={3.2 + index * 0.1} className="bg-[var(--gris-oscuro)] p-4 rounded-lg border border-[var(--gris)] hover:border-[var(--verde)] transition-all duration-300 hover:opacity-100 group">
-                <Image
-                  width={100}
-                  height={100}
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="w-full h-12 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                />
-              </FadeUpCard>
-            ))}
-          </div>
         </div>
       </div>
     </div>
