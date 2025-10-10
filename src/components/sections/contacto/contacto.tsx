@@ -50,7 +50,7 @@ export default function Contacto() {
                 {/* Email */}
                 <div>
                   <p className="text-sm font-medium text-[var(--gris)] mb-1">Email</p>
-                  <p className="text-lg font-medium text-[var(--negro)]">ventas@hannalab.com</p>
+                  <p className="text-lg font-medium text-[var(--negro)]">ventas@hannahlab.com</p>
                 </div>
 
                 {/* Oficina */}
