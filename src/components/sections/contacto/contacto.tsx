@@ -44,13 +44,13 @@ export default function Contacto() {
                 {/* Teléfono */}
                 <div>
                   <p className="text-sm font-medium text-[var(--gris)] mb-1">Teléfono</p>
-                  <p className="text-lg font-medium text-[var(--negro)]">+(51) 984 323 201</p>
+                  <p className="text-lg font-medium text-[var(--negro)]">+(51) 925 223 153</p>
                 </div>
 
                 {/* Email */}
                 <div>
                   <p className="text-sm font-medium text-[var(--gris)] mb-1">Email</p>
-                  <p className="text-lg font-medium text-[var(--negro)]">gerencia@hannalab.com</p>
+                  <p className="text-lg font-medium text-[var(--negro)]">ventas@hannalab.com</p>
                 </div>
 
                 {/* Oficina */}
@@ -61,9 +61,6 @@ export default function Contacto() {
                     <br />
                     <span className="text-sm text-[var(--gris)]">Disponible remotamente</span>
                   </p>
-                  <a href="#" className="text-sm text-[var(--verde)] hover:underline inline-flex items-center gap-1 mt-1">
-                    Ver en Google Maps →
-                  </a>
                 </div>
               </div>
             </div>

@@ -25,9 +25,8 @@ export const Hannah = () => {
                 Quiénes Somos
               </AnimatedTitle>
               <FadeUpCard delay={0.6} className="text-lg font-[var(--font-now)] text-[var(--blanco)] leading-relaxed mb-6">
-                Hannah Produce es una empresa especializada en <span className="text-[var(--verde)]">desarrollo de software</span>,
-                <span className="text-[var(--verde)]"> automatizaciones inteligentes</span> y
-                <span className="text-[var(--verde)]"> producción audiovisual</span> de alta calidad.
+                Hannah Produce es una empresa especializada en <span className="text-[var(--verde)]">desarrollo de software</span>
+                <span className="text-[var(--verde)]"> y automatizaciones inteligentes</span> de alta calidad.
               </FadeUpCard>
               <FadeUpCard delay={0.8} className="text-lg font-[var(--font-now)] text-[var(--gris-claro)] leading-relaxed">
                 Nos dedicamos a crear soluciones tecnológicas innovadoras que optimizan procesos,

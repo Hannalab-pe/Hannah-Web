@@ -17,7 +17,7 @@ export const Automatizacion = () => {
         </div>
         <FadeUpCard className="text-center md:text-left" delay={0.4}>
           <p className="text-xl md:text-2xl text-[var(--blanco)] font-[var(--font-now)] leading-relaxed italic">
-            {'"Python, Langchain, para crear automatizaciones en base a scripts y procesos de IA."'}
+            {'"Python, LangChain y LangGraph para crear automatizaciones en base a scripts y procesos de IA."'}
           </p>
         </FadeUpCard>
       </div>

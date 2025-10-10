@@ -22,7 +22,7 @@ export const Tecnologias = () => {
           {/* Infinite Scrolling Carousel */}
           <div className="flex animate-scroll">
             {/* First set of technologies */}
-            <div className="flex gap-6 min-w-max">
+            <div className="flex gap-6 min-w-max lg:my-5">
               {technologies.map((tech, index) => (
                 <FadeUpCard 
                   key={`first-${tech.name}`}
@@ -35,7 +35,7 @@ export const Tecnologias = () => {
                       height={100}
                       src={tech.logo} 
                       alt={tech.name}
-                      className="w-10 h-10 md:w-12 md:h-12 object-contain filter brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-300"
+                      className="w-10 h-10 md:w-12 md:h-12 object-contain filter group-hover:invert-0 transition-all duration-300"
                       title={tech.name}
                     />
                   </div>
