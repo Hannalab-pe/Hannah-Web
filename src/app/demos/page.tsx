@@ -91,8 +91,11 @@ export default function DemosPage() {
         // Mostrar éxito por 1 segundo y luego redirigir
         setTimeout(() => {
           closeEmailModal();
+          // Usar setTimeout adicional para asegurar que el modal se cierre completamente
           setTimeout(() => {
-            window.open("https://eda-demo.vercel.app/login", "_blank");
+            // Para iOS Safari, usar location.assign en lugar de window.open
+            // que puede ser bloqueado por políticas de seguridad
+            window.location.assign("https://eda-demo.vercel.app/login");
           }, 400);
         }, 1000);
       } else {
